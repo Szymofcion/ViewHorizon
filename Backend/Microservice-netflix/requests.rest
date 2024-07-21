@@ -1,0 +1,26 @@
+
+get http://localhost:3000/movies/
+
+
+###
+get http://localhost:3000/api/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgwMDkxNDMwLCJleHAiOjE2ODAwOTE0NTB9.Yp5nIJMfB-j_hz2kiMdT2j96yAJZ3IZUL3ez6qimOH8
+
+###
+POST http://localhost:3000/api/auth/login
+content-type: "application/json"
+
+{
+    "login" : "daria",
+    "password" : "123"
+}
+
+###
+
+POST http://localhost:3000/api/auth/refresh
+Content-Type: application/json
+
+{
+    "token":
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjgwMDkxOTI0LCJleHAiOjE2ODA2MTc1MjR9.tN5o2FfUJmO_vcNt0w7r-FkANv0Xj354E5MC7gRvqJE"
+}
